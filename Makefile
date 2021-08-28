@@ -68,7 +68,7 @@ PIXMAPDIR_DEF	= -DPIXMAP_ROOTDIR=\"${datadir}/pixmaps/\"
 CPPFLAGS	= -I. -I$(srcdir) -DHAVE_CONFIG_H -D_DEFAULT_SOURCE -D_XOPEN_SOURCE=700 -DNARROWPROTO=1 -DFUNCPROTO=15 -DOSMAJORVERSION=5 -DOSMINORVERSION=13 -DDEFCLASS=\"XTerm\" $(PIXMAPDIR_DEF) $(EXTRA_CPPFLAGS)
 CFLAGS		= -g -O2 $(EXTRA_CFLAGS)
 LDFLAGS		=  
-LIBS		=  -kpcre2-posix -lXext -lutil -lXaw7 -lXmu -lXpm -lXt -lX11 -lSM -lICE -ltermcap
+LIBS		=  -lm -kpcreposix -kpcre -lXext -lutil -lXaw7 -lXmu -lXpm -lXt -lX11 -lSM -lICE -ltermcap
 
 prefix		= /usr/local
 exec_prefix	= ${prefix}
@@ -100,9 +100,9 @@ PIXMAPDIR	= $(DESTDIR)$(pixmapdir)
 INSTALL_DIRS    = $(BINDIR) $(APPSDIR) $(ICONDIR) $(PIXMAPDIR) $(MANDIR)
 
 CLASS		= XTerm
-EXTRAHDR	=  256colres.h Tekparse.h charclass.h precompose.h wcwidth.h
-EXTRASRC	=  TekPrsTbl.c Tekproc.c charclass.c precompose.c wcwidth.c
-EXTRAOBJ	=  TekPrsTbl.o Tekproc.o charclass.o precompose.o wcwidth.o
+EXTRAHDR	=  charclass.h precompose.h wcwidth.h graphics_regis.h graphics_sixel.h graphics.h
+EXTRASRC	=  charclass.c precompose.c wcwidth.c graphics_regis.c graphics_sixel.c graphics.c
+EXTRAOBJ	=  charclass.o precompose.o wcwidth.o graphics_regis.o graphics_sixel.o graphics.o
 
 AUTO_SOURCE	= \
 		builtin_icons.h \
@@ -207,7 +207,7 @@ resize$x : $(OBJS2)
 	-$(RM) $@
 	perl $(srcdir)/88colres.pl > $@
 
-charproc$o : $(VTPARSE_H) main.h  256colres.h
+charproc$o : $(VTPARSE_H) main.h 
 graphics_regis$o : $(VTPARSE_H) 
 graphics_sixel$o : $(VTPARSE_H) 
 misc$o : $(VTPARSE_H) 
