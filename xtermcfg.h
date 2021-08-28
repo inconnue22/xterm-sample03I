@@ -141,47 +141,47 @@
 /* #undef NO_ACTIVE_ICON */		/* CF_ARG_DISABLE(active-icon) */
 /* #undef NO_LEAKS */			/* CF_ARG_DISABLE(leaks) */
 /* #undef OPT_256_COLORS */		/* CF_ARG_ENABLE(256-color) */
-/* #undef OPT_88_COLORS */		/* CF_ARG_ENABLE(88-color) */
-/* #undef OPT_AIX_COLORS */		/* CF_ARG_DISABLE(16-color) */
+#define OPT_88_COLORS 1		/* CF_ARG_ENABLE(88-color) */
+#define OPT_AIX_COLORS 0		/* CF_ARG_DISABLE(16-color) */
 /* #undef OPT_BLINK_CURS */		/* CF_ARG_DISABLE(blink-cursor) */
 /* #undef OPT_BLINK_TEXT */		/* CF_ARG_DISABLE(blink-text) */
-#define OPT_BOX_CHARS 0		/* CF_ARG_DISABLE(boxchars) */
+/* #undef OPT_BOX_CHARS */		/* CF_ARG_DISABLE(boxchars) */
 #define OPT_BROKEN_OSC 1		/* CF_ARG_ENABLE(broken-osc) */
 /* #undef OPT_BROKEN_ST */		/* CF_ARG_DISABLE(broken-st) */
-#define OPT_BUILTIN_XPMS 1		/* CF_ARG_ENABLE(builtin-xpms) */
-#define OPT_C1_PRINT 0		/* CF_ARG_DISABLE(c1-print) */
+/* #undef OPT_BUILTIN_XPMS */		/* CF_ARG_ENABLE(builtin-xpms) */
+/* #undef OPT_C1_PRINT */		/* CF_ARG_DISABLE(c1-print) */
 /* #undef OPT_COLOR_CLASS */		/* CF_ARG_DISABLE(color-class) */
 /* #undef OPT_DABBREV */		/* CF_ARG_ENABLE(dabbrev) */
-/* #undef OPT_DEC_CHRSET */		/* CF_ARG_DISABLE(doublechars) */
+#define OPT_DEC_CHRSET 0		/* CF_ARG_DISABLE(doublechars) */
 #define OPT_DEC_LOCATOR 1		/* CF_ARG_ENABLE(dec-locator) */
-/* #undef OPT_DEC_RECTOPS */		/* CF_ARG_ENABLE(rectangles) */
+#define OPT_DEC_RECTOPS 1		/* CF_ARG_ENABLE(rectangles) */
 /* #undef OPT_DIRECT_COLOR */		/* CF_ARG_ENABLE(direct-color) */
 #define OPT_DOUBLE_BUFFER 1	/* CF_ARG_ENABLE(double-buffer) */
 #define OPT_EXEC_XTERM 1		/* CF_ARG_ENABLE(exec-xterm) */
 #define OPT_FIFO_LINES 1		/* CF_ARG_ENABLE(fifo-lines) */
 #define OPT_GRAPHICS 1		/* CF_ARG_ENABLE(graphics) */
-/* #undef OPT_HIGHLIGHT_COLOR */	/* CF_ARG_DISABLE(highlighting) */
+#define OPT_HIGHLIGHT_COLOR 0	/* CF_ARG_DISABLE(highlighting) */
 /* #undef OPT_HP_FUNC_KEYS */		/* CF_ARG_ENABLE(hp-fkeys) */
 #define OPT_I18N_SUPPORT 0		/* CF_ARG_DISABLE(i18n) */
-/* #undef OPT_INITIAL_ERASE */	/* CF_ARG_DISABLE(initial-erase) */
+#define OPT_INITIAL_ERASE 0	/* CF_ARG_DISABLE(initial-erase) */
 #define OPT_INPUT_METHOD 0		/* CF_ARG_DISABLE(input-method) */
-#define OPT_ISO_COLORS 0		/* CF_ARG_DISABLE(ansi-color) */
+/* #undef OPT_ISO_COLORS */		/* CF_ARG_DISABLE(ansi-color) */
 /* #undef OPT_LOAD_VTFONTS */		/* CF_ARG_ENABLE(load-vt-fonts) */
-/* #undef OPT_LUIT_PROG */		/* CF_ARG_ENABLE(luit) */
-/* #undef OPT_MAXIMIZE */		/* CF_ARG_DISABLE(maximize) */
+#define OPT_LUIT_PROG 1		/* CF_ARG_ENABLE(luit) */
+#define OPT_MAXIMIZE 0		/* CF_ARG_DISABLE(maximize) */
 /* #undef OPT_MINI_LUIT */		/* CF_ARG_ENABLE(mini-luit) */
 #define OPT_NUM_LOCK 0		/* CF_ARG_DISABLE(num-lock) */
 #define OPT_PASTE64 1		/* CF_ARG_ENABLE(past64) */
-/* #undef OPT_PC_COLORS */		/* CF_ARG_DISABLE(pc-color) */
+#define OPT_PC_COLORS 0		/* CF_ARG_DISABLE(pc-color) */
 /* #undef OPT_PRINT_GRAPHICS */	/* CF_ARG_ENABLE(print-graphics) */
 #define OPT_PTY_HANDSHAKE 1	/* CF_ARG_ENABLE(pty-handshake) */
 #define OPT_READLINE 1		/* CF_ARG_ENABLE(readline-mouse) */
-/* #undef OPT_REGIS_GRAPHICS */	/* CF_ARG_ENABLE(regis-graphics) */
-/* #undef OPT_SAME_NAME */		/* CF_ARG_DISABLE(samename) */
-/* #undef OPT_SCO_FUNC_KEYS */	/* CF_ARG_ENABLE(sco-fkeys) */
+#define OPT_REGIS_GRAPHICS 1	/* CF_ARG_ENABLE(regis-graphics) */
+#define OPT_SAME_NAME 0		/* CF_ARG_DISABLE(samename) */
+#define OPT_SCO_FUNC_KEYS 1	/* CF_ARG_ENABLE(sco-fkeys) */
 /* #undef OPT_SCREEN_DUMPS */		/* CF_ARG_ENABLE(screen-dumps) */
 #define OPT_SELECTION_OPS 0	/* CF_ARG_DISABLE(selection-ops) */
-/* #undef OPT_SELECT_REGEX */		/* CF_ARG_DISABLE(regex) */
+#define OPT_SELECT_REGEX 1		/* CF_ARG_DISABLE(regex) */
 #define OPT_SESSION_MGT 0		/* CF_ARG_DISABLE(session-mgt) */
 #define OPT_SIXEL_GRAPHICS 1	/* CF_ARG_ENABLE(sixel-graphics) */
 /* #undef OPT_SUN_FUNC_KEYS */	/* CF_ARG_ENABLE(sun-fkeys) */
@@ -190,9 +190,9 @@
 /* #undef OPT_TEK4014 */		/* CF_ARG_DISABLE(tek4014) */
 #define OPT_TOOLBAR 1		/* CF_ARG_ENABLE(toolbar) */
 /* #undef OPT_VT52_MODE */		/* CF_ARG_DISABLE(vt52) */
-/* #undef OPT_WIDER_ICHAR */		/* CF_ARG_ENABLE(16bit-chars) */
+#define OPT_WIDER_ICHAR 0		/* CF_ARG_ENABLE(16bit-chars) */
 /* #undef OPT_WIDE_ATTRS */		/* CF_ARG_DISABLE(wide-attrs) */
-/* #undef OPT_WIDE_CHARS */		/* CF_ARG_DISABLE(wide-chars) */
+#define OPT_WIDE_CHARS 1		/* CF_ARG_DISABLE(wide-chars) */
 /* #undef OPT_XMC_GLITCH */		/* CF_ARG_ENABLE(xmc-glitch) */
 #define OPT_ZICONBEEP 0		/* CF_ARG_DISABLE(ziconbeep) */
 /* #undef OWN_TERMINFO_DIR */		/* AC_ARG_WITH(own-terminfo) */
