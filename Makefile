@@ -100,9 +100,9 @@ PIXMAPDIR	= $(DESTDIR)$(pixmapdir)
 INSTALL_DIRS    = $(BINDIR) $(APPSDIR) $(ICONDIR) $(PIXMAPDIR) $(MANDIR)
 
 CLASS		= XTerm
-EXTRAHDR	=  charclass.h precompose.h wcwidth.h graphics_sixel.h graphics.h
-EXTRASRC	=  charclass.c precompose.c wcwidth.c html.c svg.c graphics_sixel.c graphics.c
-EXTRAOBJ	=  charclass.o precompose.o wcwidth.o html.o svg.o graphics_sixel.o graphics.o
+EXTRAHDR	=  Tekparse.h graphics_sixel.h graphics.h
+EXTRASRC	=  TekPrsTbl.c Tekproc.c html.c svg.c graphics_sixel.c graphics.c
+EXTRAOBJ	=  TekPrsTbl.o Tekproc.o html.o svg.o graphics_sixel.o graphics.o
 
 AUTO_SOURCE	= \
 		builtin_icons.h \
