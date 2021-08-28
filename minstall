@@ -155,7 +155,7 @@ sed	-e 's%__vendorversion__%"X Window System"%' \
 	-e "s%__backarrow_is_bs__%True%" \
 	-e "s%__backarrow_is_erase__%False%" \
 	-e "s%__delete_is_del__%Maybe%" \
-	-e "s%__double_buffer__%True%" \
+	-e "s%__double_buffer__%False%" \
 	-e "s%__initial_erase__%False%" \
 	-e "s%__default_class__%$APP_TYPE%" \
 	-e "s%__apploaddir__%$APPS_DIR%" \
