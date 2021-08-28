@@ -68,7 +68,7 @@ PIXMAPDIR_DEF	= -DPIXMAP_ROOTDIR=\"${datadir}/pixmaps/\"
 CPPFLAGS	= -I. -I$(srcdir) -DHAVE_CONFIG_H -D_DEFAULT_SOURCE -D_XOPEN_SOURCE=700 -DNARROWPROTO=1 -DFUNCPROTO=15 -DOSMAJORVERSION=5 -DOSMINORVERSION=13 -DDEFCLASS=\"XTerm\" $(PIXMAPDIR_DEF) $(EXTRA_CPPFLAGS)
 CFLAGS		= -g -O2 $(EXTRA_CFLAGS)
 LDFLAGS		=  
-LIBS		=  -lm -kpcre2-posix -lXext -lutil -lXaw7 -lXmu -lXpm -lXt -lX11 -lSM -lICE -ltermcap
+LIBS		=  -lm -lXext -lutil -lXaw7 -lXmu -lXpm -lXt -lX11 -lSM -lICE -ltermcap
 
 prefix		= /usr/local
 exec_prefix	= ${prefix}
