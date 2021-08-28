@@ -51,7 +51,7 @@
  */
 
 /* #undef ALLOWLOGFILEEXEC */		/* CF_ARG_ENABLE(enable-logfile-exec) */
-/* #undef ALLOWLOGGING */		/* CF_ARG_ENABLE(enable-logging) */
+#define ALLOWLOGGING 1		/* CF_ARG_ENABLE(enable-logging) */
 /* #undef CC_HAS_PROTOS */		/* CF_ANSI_CC */
 /* #undef CSRG_BASED */		/* CF_TYPE_FD_MASK */
 /* #undef DECL_ERRNO */		/* CF_ERRNO */
@@ -61,7 +61,7 @@
 #define DEF_BACKARO_ERASE False	/* CF_ARG_ENABLE(backarrow-is-erase) */
 #define DEF_INITIAL_ERASE False	/* CF_ARG_DISABLE(initial-erase) */
 #define DEF_META_SENDS_ESC False	/* CF_ARG_ENABLE(meta-sends-esc) */
-/* #undef DFT_COLORMODE */		/* AC_ARG_WITH(default-color-mode) */
+#define DFT_COLORMODE 0		/* AC_ARG_WITH(default-color-mode) */
 #define DFT_DECID "420"		/* AC_ARG_WITH(default-terminal-id) */
 #define DFT_TERMTYPE "xterm"		/* AC_ARG_WITH(default-term-type) */
 /* #undef DISABLE_SETGID */		/* CF_ARG_DISABLE(setgid) */
@@ -142,10 +142,10 @@
 /* #undef NO_LEAKS */			/* CF_ARG_DISABLE(leaks) */
 /* #undef OPT_256_COLORS */		/* CF_ARG_ENABLE(256-color) */
 /* #undef OPT_88_COLORS */		/* CF_ARG_ENABLE(88-color) */
-/* #undef OPT_AIX_COLORS */		/* CF_ARG_DISABLE(16-color) */
-#define OPT_BLINK_CURS 0		/* CF_ARG_DISABLE(blink-cursor) */
+#define OPT_AIX_COLORS 0		/* CF_ARG_DISABLE(16-color) */
+/* #undef OPT_BLINK_CURS */		/* CF_ARG_DISABLE(blink-cursor) */
 /* #undef OPT_BLINK_TEXT */		/* CF_ARG_DISABLE(blink-text) */
-/* #undef OPT_BOX_CHARS */		/* CF_ARG_DISABLE(boxchars) */
+#define OPT_BOX_CHARS 0		/* CF_ARG_DISABLE(boxchars) */
 #define OPT_BROKEN_OSC 1		/* CF_ARG_ENABLE(broken-osc) */
 /* #undef OPT_BROKEN_ST */		/* CF_ARG_DISABLE(broken-st) */
 #define OPT_BUILTIN_XPMS 1		/* CF_ARG_ENABLE(builtin-xpms) */
@@ -153,52 +153,52 @@
 /* #undef OPT_COLOR_CLASS */		/* CF_ARG_DISABLE(color-class) */
 #define OPT_DABBREV 1		/* CF_ARG_ENABLE(dabbrev) */
 /* #undef OPT_DEC_CHRSET */		/* CF_ARG_DISABLE(doublechars) */
-#define OPT_DEC_LOCATOR 1		/* CF_ARG_ENABLE(dec-locator) */
-#define OPT_DEC_RECTOPS 1		/* CF_ARG_ENABLE(rectangles) */
+/* #undef OPT_DEC_LOCATOR */		/* CF_ARG_ENABLE(dec-locator) */
+/* #undef OPT_DEC_RECTOPS */		/* CF_ARG_ENABLE(rectangles) */
 /* #undef OPT_DIRECT_COLOR */		/* CF_ARG_ENABLE(direct-color) */
 #define OPT_DOUBLE_BUFFER 1	/* CF_ARG_ENABLE(double-buffer) */
-/* #undef OPT_EXEC_XTERM */		/* CF_ARG_ENABLE(exec-xterm) */
+#define OPT_EXEC_XTERM 1		/* CF_ARG_ENABLE(exec-xterm) */
 #define OPT_FIFO_LINES 1		/* CF_ARG_ENABLE(fifo-lines) */
 #define OPT_GRAPHICS 1		/* CF_ARG_ENABLE(graphics) */
-/* #undef OPT_HIGHLIGHT_COLOR */	/* CF_ARG_DISABLE(highlighting) */
-/* #undef OPT_HP_FUNC_KEYS */		/* CF_ARG_ENABLE(hp-fkeys) */
+#define OPT_HIGHLIGHT_COLOR 0	/* CF_ARG_DISABLE(highlighting) */
+#define OPT_HP_FUNC_KEYS 1		/* CF_ARG_ENABLE(hp-fkeys) */
 /* #undef OPT_I18N_SUPPORT */		/* CF_ARG_DISABLE(i18n) */
 #define OPT_INITIAL_ERASE 0	/* CF_ARG_DISABLE(initial-erase) */
 #define OPT_INPUT_METHOD 0		/* CF_ARG_DISABLE(input-method) */
-#define OPT_ISO_COLORS 0		/* CF_ARG_DISABLE(ansi-color) */
-#define OPT_LOAD_VTFONTS 1		/* CF_ARG_ENABLE(load-vt-fonts) */
-/* #undef OPT_LUIT_PROG */		/* CF_ARG_ENABLE(luit) */
+/* #undef OPT_ISO_COLORS */		/* CF_ARG_DISABLE(ansi-color) */
+/* #undef OPT_LOAD_VTFONTS */		/* CF_ARG_ENABLE(load-vt-fonts) */
+#define OPT_LUIT_PROG 1		/* CF_ARG_ENABLE(luit) */
 /* #undef OPT_MAXIMIZE */		/* CF_ARG_DISABLE(maximize) */
-/* #undef OPT_MINI_LUIT */		/* CF_ARG_ENABLE(mini-luit) */
+#define OPT_MINI_LUIT 1		/* CF_ARG_ENABLE(mini-luit) */
 #define OPT_NUM_LOCK 0		/* CF_ARG_DISABLE(num-lock) */
 #define OPT_PASTE64 0		/* CF_ARG_ENABLE(past64) */
 /* #undef OPT_PC_COLORS */		/* CF_ARG_DISABLE(pc-color) */
 /* #undef OPT_PRINT_GRAPHICS */	/* CF_ARG_ENABLE(print-graphics) */
 #define OPT_PTY_HANDSHAKE 1	/* CF_ARG_ENABLE(pty-handshake) */
 /* #undef OPT_READLINE */		/* CF_ARG_ENABLE(readline-mouse) */
-#define OPT_REGIS_GRAPHICS 1	/* CF_ARG_ENABLE(regis-graphics) */
-/* #undef OPT_SAME_NAME */		/* CF_ARG_DISABLE(samename) */
+/* #undef OPT_REGIS_GRAPHICS */	/* CF_ARG_ENABLE(regis-graphics) */
+#define OPT_SAME_NAME 0		/* CF_ARG_DISABLE(samename) */
 /* #undef OPT_SCO_FUNC_KEYS */	/* CF_ARG_ENABLE(sco-fkeys) */
 /* #undef OPT_SCREEN_DUMPS */		/* CF_ARG_ENABLE(screen-dumps) */
 #define OPT_SELECTION_OPS 0	/* CF_ARG_DISABLE(selection-ops) */
 /* #undef OPT_SELECT_REGEX */		/* CF_ARG_DISABLE(regex) */
-/* #undef OPT_SESSION_MGT */		/* CF_ARG_DISABLE(session-mgt) */
-/* #undef OPT_SIXEL_GRAPHICS */	/* CF_ARG_ENABLE(sixel-graphics) */
-#define OPT_SUN_FUNC_KEYS 0	/* CF_ARG_ENABLE(sun-fkeys) */
+#define OPT_SESSION_MGT 0		/* CF_ARG_DISABLE(session-mgt) */
+#define OPT_SIXEL_GRAPHICS 1	/* CF_ARG_ENABLE(sixel-graphics) */
+/* #undef OPT_SUN_FUNC_KEYS */	/* CF_ARG_ENABLE(sun-fkeys) */
 #define OPT_TCAP_FKEYS 1		/* CF_ARG_ENABLE(tcap-fkeys) */
-/* #undef OPT_TCAP_QUERY */		/* CF_ARG_ENABLE(tcap-query) */
-/* #undef OPT_TEK4014 */		/* CF_ARG_DISABLE(tek4014) */
+#define OPT_TCAP_QUERY 1		/* CF_ARG_ENABLE(tcap-query) */
+#define OPT_TEK4014 0		/* CF_ARG_DISABLE(tek4014) */
 #define OPT_TOOLBAR 1		/* CF_ARG_ENABLE(toolbar) */
-#define OPT_VT52_MODE 0		/* CF_ARG_DISABLE(vt52) */
-/* #undef OPT_WIDER_ICHAR */		/* CF_ARG_ENABLE(16bit-chars) */
-#define OPT_WIDE_ATTRS 0		/* CF_ARG_DISABLE(wide-attrs) */
-/* #undef OPT_WIDE_CHARS */		/* CF_ARG_DISABLE(wide-chars) */
+/* #undef OPT_VT52_MODE */		/* CF_ARG_DISABLE(vt52) */
+#define OPT_WIDER_ICHAR 0		/* CF_ARG_ENABLE(16bit-chars) */
+/* #undef OPT_WIDE_ATTRS */		/* CF_ARG_DISABLE(wide-attrs) */
+#define OPT_WIDE_CHARS 1		/* CF_ARG_DISABLE(wide-chars) */
 /* #undef OPT_XMC_GLITCH */		/* CF_ARG_ENABLE(xmc-glitch) */
-/* #undef OPT_ZICONBEEP */		/* CF_ARG_DISABLE(ziconbeep) */
+#define OPT_ZICONBEEP 0		/* CF_ARG_DISABLE(ziconbeep) */
 /* #undef OWN_TERMINFO_DIR */		/* AC_ARG_WITH(own-terminfo) */
 /* #undef OWN_TERMINFO_ENV */		/* AC_ARG_ENABLE(env-terminfo) */
-/* #undef PROCFS_ROOT */		/* CF_ARG_ENABLE(exec-xterm) */
-#define SCROLLBAR_RIGHT 1		/* CF_ARG_ENABLE(rightbar) */
+#define PROCFS_ROOT "/proc"		/* CF_ARG_ENABLE(exec-xterm) */
+/* #undef SCROLLBAR_RIGHT */		/* CF_ARG_ENABLE(rightbar) */
 #define SIG_ATOMIC_T volatile sig_atomic_t		/* CF_SIG_ATOMIC_T */
 /* #undef STDC_NORETURN */		/* CF_C11_NORETURN */
 /* #undef SVR4 */			/* CF_SVR4, imake */
