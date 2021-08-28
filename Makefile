@@ -100,9 +100,9 @@ PIXMAPDIR	= $(DESTDIR)$(pixmapdir)
 INSTALL_DIRS    = $(BINDIR) $(APPSDIR) $(ICONDIR) $(PIXMAPDIR) $(MANDIR)
 
 CLASS		= XTerm
-EXTRAHDR	=  Tekparse.h graphics_regis.h graphics.h
-EXTRASRC	=  TekPrsTbl.c Tekproc.c html.c svg.c graphics_regis.c graphics.c
-EXTRAOBJ	=  TekPrsTbl.o Tekproc.o html.o svg.o graphics_regis.o graphics.o
+EXTRAHDR	=  88colres.h Tekparse.h charclass.h precompose.h wcwidth.h graphics_regis.h graphics_sixel.h graphics.h
+EXTRASRC	=  TekPrsTbl.c Tekproc.c charclass.c precompose.c wcwidth.c html.c svg.c graphics_regis.c graphics_sixel.c graphics.c
+EXTRAOBJ	=  TekPrsTbl.o Tekproc.o charclass.o precompose.o wcwidth.o html.o svg.o graphics_regis.o graphics_sixel.o graphics.o
 
 AUTO_SOURCE	= \
 		builtin_icons.h \
@@ -207,7 +207,7 @@ resize$x : $(OBJS2)
 	-$(RM) $@
 	perl $(srcdir)/88colres.pl > $@
 
-charproc$o : $(VTPARSE_H) main.h 
+charproc$o : $(VTPARSE_H) main.h  88colres.h
 graphics_regis$o : $(VTPARSE_H) 
 graphics_sixel$o : $(VTPARSE_H) 
 misc$o : $(VTPARSE_H) 
