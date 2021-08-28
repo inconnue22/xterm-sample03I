@@ -68,7 +68,7 @@ PIXMAPDIR_DEF	= -DPIXMAP_ROOTDIR=\"${datadir}/pixmaps/\"
 CPPFLAGS	= -I. -I$(srcdir) -DHAVE_CONFIG_H -D_DEFAULT_SOURCE -D_XOPEN_SOURCE=700 -DNARROWPROTO=1 -DFUNCPROTO=15 -DOSMAJORVERSION=5 -DOSMINORVERSION=13 -DDEFCLASS=\"XTerm\" $(PIXMAPDIR_DEF) $(EXTRA_CPPFLAGS)
 CFLAGS		= -g -O2 $(EXTRA_CFLAGS)
 LDFLAGS		=  
-LIBS		=  -lm -lXext -lutil -lXaw7 -lXmu -lXpm -lXt -lX11 -lSM -lICE -ltermcap
+LIBS		=  -lXext -lutil -lXaw7 -lXmu -lXpm -lXt -lX11 -lSM -lICE -ltermcap
 
 prefix		= /usr/local
 exec_prefix	= ${prefix}
@@ -100,9 +100,9 @@ PIXMAPDIR	= $(DESTDIR)$(pixmapdir)
 INSTALL_DIRS    = $(BINDIR) $(APPSDIR) $(ICONDIR) $(PIXMAPDIR) $(MANDIR)
 
 CLASS		= XTerm
-EXTRAHDR	=  graphics_regis.h graphics.h
-EXTRASRC	=  graphics_regis.c graphics.c
-EXTRAOBJ	=  graphics_regis.o graphics.o
+EXTRAHDR	=  88colres.h
+EXTRASRC	= 
+EXTRAOBJ	= 
 
 AUTO_SOURCE	= \
 		builtin_icons.h \
@@ -207,7 +207,7 @@ resize$x : $(OBJS2)
 	-$(RM) $@
 	perl $(srcdir)/88colres.pl > $@
 
-charproc$o : $(VTPARSE_H) main.h 
+charproc$o : $(VTPARSE_H) main.h  88colres.h
 graphics_regis$o : $(VTPARSE_H) 
 graphics_sixel$o : $(VTPARSE_H) 
 misc$o : $(VTPARSE_H) 
